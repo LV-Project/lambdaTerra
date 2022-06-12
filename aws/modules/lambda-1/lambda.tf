@@ -5,10 +5,10 @@ resource "aws_lambda_function" "java_lambda_function" {
   function_name = "java_lambda_function"
 
   handler          = "${var.lambda_function_handler}"
-  timeout = 60
-  memory_size = 256
+  timeout = var.timeout
+  memory_size = var.memory_size
   role             = "${aws_iam_role.iam_role_for_lambda.arn}"
-  depends_on   = ["aws_cloudwatch_log_group.log_group"]
+  depends_on   = [aws_cloudwatch_log_group.log_group]
 
 }
 

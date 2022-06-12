@@ -2,3 +2,6 @@
 *.tfplan
 *.terraform
 *.tfstate
+*.jar
+*.zip
+*.backup
